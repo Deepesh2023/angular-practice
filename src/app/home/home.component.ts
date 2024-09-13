@@ -11,6 +11,7 @@ import { HousingLocation } from '../housinglocation';
 })
 export class HomeComponent {
   readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+
   housingLocation: HousingLocation = {
     id: 9999,
     name: 'Test Home',
