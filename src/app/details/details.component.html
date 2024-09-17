@@ -1,7 +1,7 @@
 <article>
   <img
     class="listing-photo"
-    [src]="housingLocation?.photo"
+    [src]="baseUrl + housingLocation?.photo"
     alt="Exterior photo of {{ housingLocation?.name }}"
     crossorigin
   />
@@ -30,7 +30,7 @@
 
       <label for="email">Email</label>
       <input id="email" type="email" formControlName="email" />
-      
+
       <button type="submit" class="primary">Apply now</button>
     </form>
   </section>

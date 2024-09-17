@@ -24,10 +24,18 @@ export class DetailsComponent {
     email: new FormControl(''),
   });
 
+  baseUrl: string = '';
+
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingLocation =
-      this.housingService.getHousingLocationById(housingLocationId);
+
+    this.housingService
+      .getHousingLocationById(housingLocationId)
+      .then((data) => {
+        this.housingLocation = data;
+      });
+
+    this.baseUrl = this.housingService.getImageBaseUrl();
   }
 
   submitApplication() {
